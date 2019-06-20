@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="external/jquery/jquery.js"></script>  
+    <script src="jquery.mobile-1.4.5.js"></script>
+    <script src="javascript/app.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <title>Proyecto Final jQuery UI Mobile</title>
+  </head>
+
+  <body>
+    <!----------------------------------------- PAGINA 1 ----------------------------------------->
+    <div data-role="page" id="pagina1">
+      <!---------------------------------------- HEADER ------------------------------------------>
+      <div data-role="header">
+        <h1>Gestión de Hoteles</h1>
+      </div>
+      <!--------------------------------------- CONTENIDO ---------------------------------------->
+      <div data-role="content">
+        <a class="ui-btn" onclick="cambiarPagina('pagina2')">Registrar Hotel</a>
+        <a class="ui-btn" id="botonLista">Lista de Hoteles</a>
+      </div>
+      <!---------------------------------------- FOOTER ------------------------------------------>
+      <div data-role="footer">
+        <p align="center">Gestión de Hoteles © 2019</p>
+      </div>
+    </div>
+
+    <!----------------------------------------- PAGINA 2 ----------------------------------------->
+    <div data-role="page" id="pagina2">
+      <!---------------------------------------- HEADER ------------------------------------------>
+      <div data-role="header">
+        <h1>Registrar Hotel</h1>
+      </div>
+      <!--------------------------------------- CONTENIDO ---------------------------------------->
+      <div data-role="content">
+        <form>
+          <div class="ui-field-contain">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+            <label for="ubicacion">Ubicación</label>
+            <div data-role="content" id="divMapaRegistro"></div>
+            <label for="ciudad">Ciudad</label>
+            <input type="text" name="ciudad" id="ciudad">
+            <label for="telefono">Teléfono</label>
+            <input type="text" name="telefono" id="telefono">
+            <label for="estrellas">Estrellas</label>
+            <input type="text" name="estrellas" id="estrellas">
+          </div>
+        </form>
+        <a class="ui-btn" id="botonRegistrar">Registrar Hotel</a>
+        <a class="ui-btn" onclick="cambiarPagina('pagina1')">Volver</a>
+      </div>
+      <!---------------------------------------- FOOTER ------------------------------------------>
+      <div data-role="footer">
+        <p align="center">Gestión de Hoteles © 2019</p>
+      </div>
+    </div>
+
+    <!----------------------------------------- PAGINA 3 ----------------------------------------->
+    <div data-role="page" id="pagina3">
+      <!---------------------------------------- HEADER ------------------------------------------>
+      <div data-role="header">
+        <h1>Lista de Hoteles</h1>
+      </div>
+      <!--------------------------------------- CONTENIDO ---------------------------------------->
+      <div data-role="content">
+        <table id="tablaHoteles" style="width:100%" border="1">
+          <tr></tr>
+        </table>
+        <a class="ui-btn" onclick="cambiarPagina('pagina1')">Volver</a>
+      </div>
+      <!---------------------------------------- FOOTER ------------------------------------------>
+      <div data-role="footer">
+        <p align="center">Gestión de Hoteles © 2019</p>
+      </div>
+    </div>
+
+
+    <!----------------------------------------- PAGINA 4 ----------------------------------------->
+    <div data-role="page" id="pagina4">
+      <!---------------------------------------- HEADER ------------------------------------------>
+      <div data-role="header">
+        <h1>Información del Hotel</h1>
+      </div>
+      <!--------------------------------------- CONTENIDO ---------------------------------------->
+      <div data-role="content">
+
+          <div class="ui-field-contain">
+            <h3>Nombre</h3>
+            <p id="nombreHotel"></p>
+            <h3>Ciudad</h3>
+            <p id="ciudadHotel"></p>
+            <h3>Teléfono</h3>
+            <p id="telefonoHotel"></p>
+            <h3>Estrellas</h3>
+            <p id="estrellasHotel"></p>
+            <h3>Ubicación</h3>
+            <div data-role="content" id="divMapa"></div>
+          </div>
+
+        <a class="ui-btn" onclick="cambiarPagina('pagina3')">Lista de Hoteles</a>
+      </div>
+      <!---------------------------------------- FOOTER ------------------------------------------>
+      <div data-role="footer">
+        <p align="center">Gestión de Hoteles © 2019</p>
+      </div>
+    </div>
+
+
+  </body>
+
+</html>
+
+
+
+
+
